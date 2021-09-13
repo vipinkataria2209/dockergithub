@@ -18,8 +18,7 @@ jobs:
       env:
         DOCKER_USER: ${{ secrets.USER_NAME }}   
         DOCKER_PASSWORD: ${{ secrets.USER_PASSWORD }}
-    - name: Login
-      run : docker login -u $USER_NAME -p $USER_PASSWORD
+        run : docker login -u $USER_NAME -p $USER_PASSWORD
       
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag 'demoimage'
