@@ -21,7 +21,7 @@ jobs:
       run : docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
       
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag 'demoimage'
+      run: docker build . --file Dockerfile --tag 'vipinkataria2209/demo:tag1'
    
     - name: Push Image
-      run : docker push demoimage
+      run : docker push vipinkataria2209/demo:tag1
